@@ -5,8 +5,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Belajar Bootstrap</title>
+  <!-- Bootstrap CSS -->
   <link href="vendor/twbs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="vendor/twbs/bootstrap/assets/style.css" rel="stylesheet">
+  <!-- Optional: custom CSS -->
+  <link href="vendor/twbs/bootstrap/css/style.css" rel="stylesheet">
 </head>
 <body>
   <div class="container">
@@ -18,72 +20,74 @@
           <p class="description">Belajar Membuat Template Website Dengan Bootstrap</p>
         </header>
         <nav class="menus">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Portfolio</a></li>
+          <ul class="nav">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
           </ul>
         </nav>
       </div>
     </div>
 
     <!-- Bagian Content dan Sidebar -->
-    <div class="row">
+    <div class="row mt-4">
       <div class="col-md-8 articles" id="site-content">
         <article class="posts">
           <h2 class="title-post">Form Pendaftaran</h2>
           <form class="form-horizontal" role="form">
-            <div class="form-group form-group-lg">
-              <label class="col-sm-2 control-label" for="namaDepan">Nama Depan</label>
+            <div class="mb-3 row">
+              <label class="col-sm-2 col-form-label" for="namaDepan">Nama Depan</label>
               <div class="col-sm-10">
                 <input class="form-control" type="text" id="namaDepan">
               </div>
             </div>
-            <div class="form-group form-group-sm">
-              <label class="col-sm-2 control-label" for="namaBelakang">Nama Belakang</label>
+            <div class="mb-3 row">
+              <label class="col-sm-2 col-form-label" for="namaBelakang">Nama Belakang</label>
               <div class="col-sm-10">
                 <input class="form-control" type="text" id="namaBelakang">
               </div>
             </div>
-            <div class="form-group form-group-sm">
-              <label class="col-sm-2 control-label" for="email">Email</label>
+            <div class="mb-3 row">
+              <label class="col-sm-2 col-form-label" for="email">Email</label>
               <div class="col-sm-10">
                 <input class="form-control" type="email" id="email">
               </div>
             </div>
-            <div class="form-group form-group-sm">
-              <label class="col-sm-2 control-label" for="password">Password</label>
+            <div class="mb-3 row">
+              <label class="col-sm-2 col-form-label" for="password">Password</label>
               <div class="col-sm-10">
                 <input class="form-control" type="password" id="password">
               </div>
             </div>
-            <div class="form-group form-group-sm">
-              <label class="col-sm-2 control-label" for="tanggalLahir">Tanggal Lahir</label>
+            <div class="mb-3 row">
+              <label class="col-sm-2 col-form-label" for="tanggalLahir">Tanggal Lahir</label>
               <div class="col-sm-10">
                 <input class="form-control" type="date" id="tanggalLahir">
               </div>
             </div>
-            <div class="form-group form-group-sm">
-              <label class="col-sm-2 control-label" for="alamat">Alamat</label>
+            <div class="mb-3 row">
+              <label class="col-sm-2 col-form-label" for="alamat">Alamat</label>
               <div class="col-sm-10">
                 <textarea class="form-control" rows="5" id="alamat"></textarea>
               </div>
             </div>
-            <div class="form-group form-group-sm">
-              <label class="col-sm-2 control-label" for="jenisKelamin">Jenis Kelamin</label>
+            <div class="mb-3 row">
+              <label class="col-sm-2 col-form-label">Jenis Kelamin</label>
               <div class="col-sm-10">
-                <div class="radio">
-                  <label><input type="radio" name="jenisKelamin" value="Laki-Laki"> Laki-Laki</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="jenisKelamin" value="Laki-Laki" id="jkLaki">
+                  <label class="form-check-label" for="jkLaki">Laki-Laki</label>
                 </div>
-                <div class="radio">
-                  <label><input type="radio" name="jenisKelamin" value="Perempuan"> Perempuan</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="jenisKelamin" value="Perempuan" id="jkPerempuan">
+                  <label class="form-check-label" for="jkPerempuan">Perempuan</label>
                 </div>
               </div>
             </div>
-            <div class="form-group form-group-sm">
-              <label class="col-sm-2 control-label" for="jurusan">Jurusan</label>
+            <div class="mb-3 row">
+              <label class="col-sm-2 col-form-label" for="jurusan">Jurusan</label>
               <div class="col-sm-10">
-                <select class="form-control" id="jurusan">
+                <select class="form-select" id="jurusan">
                   <option>Teknik Informatika</option>
                   <option>Teknik Elektro</option>
                   <option>Teknik Sipil</option>
@@ -92,22 +96,25 @@
                 </select>
               </div>
             </div>
-            <div class="form-group form-group-sm">
-              <label class="col-sm-2 control-label" for="hobi">Hobi</label>
+            <div class="mb-3 row">
+              <label class="col-sm-2 col-form-label">Hobi</label>
               <div class="col-sm-10">
-                <div class="checkbox">
-                  <label><input type="checkbox" name="hobi" value="Membaca"> Membaca</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="hobi" value="Membaca" id="hobiMembaca">
+                  <label class="form-check-label" for="hobiMembaca">Membaca</label>
                 </div>
-                <div class="checkbox">
-                  <label><input type="checkbox" name="hobi" value="Olahraga"> Olahraga</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="hobi" value="Olahraga" id="hobiOlahraga">
+                  <label class="form-check-label" for="hobiOlahraga">Olahraga</label>
                 </div>
-                <div class="checkbox">
-                  <label><input type="checkbox" name="hobi" value="Kuliner"> Kuliner</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="hobi" value="Kuliner" id="hobiKuliner">
+                  <label class="form-check-label" for="hobiKuliner">Kuliner</label>
                 </div>
               </div>
             </div>
-            <div class="form-group">
-              <div class="col-sm-offset-2 col-sm-10">
+            <div class="mb-3 row">
+              <div class="col-sm-10 offset-sm-2">
                 <button type="button" class="btn btn-primary">Save</button>
                 <button type="button" class="btn btn-success">Kembali</button>
                 <button type="button" class="btn btn-warning">Reset</button>
@@ -116,10 +123,11 @@
           </form>
         </article>
       </div>
+
       <div class="col-md-4 sidebar" id="site-sidebar">
         <aside class="widgets">
           <h3 class="widget-title">Menu</h3>
-          <ul>
+          <ul class="list-unstyled">
             <li><a href="#">Olahraga</a></li>
             <li><a href="#">Politik</a></li>
             <li><a href="#">Hiburan</a></li>
@@ -133,11 +141,15 @@
     <!-- Bagian Footer -->
     <div class="row">
       <div class="col-md-12 footer" id="site-footer">
-        <footer class="copyright text-center"><p>&copy; 2025 Belajar Bootstrap. LUQMANUL HAKIM - 141.</p></footer>
+        <footer class="text-center">
+          <p>&copy; 2025 Belajar Bootstrap. LUQMANUL HAKIM - 141.</p>
+        </footer>
       </div>
     </div>
   </div>
 
-  <script src="vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="vendor/twbs/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
+
